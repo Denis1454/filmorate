@@ -4,6 +4,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Builder;
 import lombok.Data;
+import ru.yandex.practicum.filmorate.model.type.FriendStatus;
 
 import java.time.LocalDate;
 import java.util.Set;
@@ -17,8 +18,8 @@ public class User {
     String email;
     @NotBlank(message = "Логин не должен быть пустым!")
     String login;
-
     String name;
     LocalDate birthday;
     Set<Integer> friends;
+    FriendStatus friendStatus;
 }
